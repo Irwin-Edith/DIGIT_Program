@@ -1,3 +1,4 @@
+# 本存储库旨在学习交流，非商用。This repository is intended for learning communication, not commercial.
 # DIGIT-INTERFACE
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
