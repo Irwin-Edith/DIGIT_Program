@@ -109,12 +109,13 @@ class Digit(DigitDefaults):
         :return: Returns the set intensity
         """
         if self.revision < 200:
-            # Deprecated version 1.01 (1b) is not supported
+            #如果固件版本小于 200，表示设备不支持独立的 RGB 控制
             intensity = int(intensity / self.__LIGHTING_SCALER)
             logger.warn(
                 "You are using a previous version of the firmware "
                 "which does not support independent RGB control, update your DIGIT firmware."
             )
+            # 调用 set_intensity_rgb，将所有颜色通道设置为相同的亮度值
         self.intensity = self.set_intensity_rgb(intensity, intensity, intensity)
         return self.intensity
 
