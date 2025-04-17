@@ -25,8 +25,7 @@ rgb_list = [(15, 0, 0), (0, 15, 0), (0, 0, 15)]
 
 # Cycle through colors R, G, B
 for rgb in rgb_list:
-    #digit.set_intensity_rgb(*rgb)
-    digit.set_intensity(15)
+    digit.set_intensity_rgb(*rgb)
     time.sleep(1)
 
 # Set all LEDs to same intensity
