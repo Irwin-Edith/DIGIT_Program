@@ -19,14 +19,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def format_serial(serial):
-    '''
-    
-    Format the serial number to be 5 digits long, with leading zeros if necessary.
-    它将用户提供的序列号转换为特定格式（以 "D" 开头，长度为 5 个字符，不足部分用 "0" 填充），并将其编码为 UTF-16LE 格式。
-    它会检查固件文件中是否包含一个特定的序列号占位符（DIGIT_SERIAL_MASK，即 "DXXXXX" 的 UTF-16LE 编码）。
-    如果找到占位符，就将其替换为新的序列号，并生成一个临时的固件文件（digit_firmware_tmp.bin）。
-    这个功能通常用于在设备固件中嵌入唯一的序列号。
-    '''
     if not serial.isdigit() or len(serial) > DIGIT_SERIAL_ID_LENGTH:
         _log.error("Serial must be between 1 and 5 characters long.")
         sys.exit(1)
